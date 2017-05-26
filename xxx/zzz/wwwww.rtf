@@ -1,0 +1,301 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fmodern\fcharset0 Courier-Oblique;
+}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww25320\viewh12860\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 https://www.youtube.com/watch?v=smvBuQ_uGqU\
+\
+DROP USER 'labeling_ew'@'127.0.0.1';\
+SELECT User, Host FROM mysql.user\
+\
+CREATE USER 'ewReadOnly'@'%' IDENTIFIED BY 'edward@*5';\
+GRANT SELECT ON *.* TO 'ewReadOnly'@'%';\
+\
+Need your Feedback on ETA calculation\
+Add onto her table additional_infos for additional info\
+\
+mysqldump -h 127.0.0.1 -p -u root  --skip-extended-insert --skip-dump-date --lock-tables=false labeling_development > db.sql\
+\
+Next Work:\
+Do more testing of ETA calculation\
+Save the Rework Detail\
+\
+sudo service unicorn_workflow stop\
+\
+# get rails server pids\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 $ lsof -wni tcp:3000\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+unicorn_yazghil\
+unicorn_cursik \
+unicorn_workflow\
+\
+RAILS_ENV=production 
+\f1 heroku run rake db:migrate --app harvest191\
+
+\f0 RAILS_ENV=production 
+\f1 heroku run rails c --app harvest191\
+heroku logs -t --app harvest191\
+\
+
+\f0 sudo service unicorn stop
+\f1 \
+crontab -l\
+crontab -r\
+whenever --update-crontab\
+sudo service cron stop\
+sudo service cron start\
+crontab -l\
+
+\f0 ps -ef | grep sidekiq
+\f1 \
+whenever\
+\
+
+\f0 ps -ef | grep sidekiq
+\f1 \
+
+\f0 \
+ps -ef | grep unicorn\
+sudo service unicorn_devhealthwire stop\
+sudo service unicorn_yazghil stop\
+sudo service unicorn_workflow stop\
+sudo service unicorn_cursik stop\
+sudo service unicorn_devhealthwire start\
+sudo service unicorn_yazghil start\
+sudo service unicorn_workflow start\
+sudo service unicorn_cursik start\
+\
+sudo service unicorn_staginghealthwire stop\
+sudo service unicorn_staginghealthwire start\
+\
+/usr/local/opt/memcached/bin/memcached  => start memchache\
+mysql.server start => start mysql\
+redis-server => start redis server\
+RAILS_ENV=production sidekiq start\
+\
+rake thinking_sphinx:configure\
+rake thinking_sphinx	:index\
+rake thinking_sphinx:start\
+\
+brew install sphinx --with-mysql    (sp3hinx/thinking-sphinx: 2.2.9/3.1.4)\
+bundle exec rake ts:configure --trace\
+bundle exec rake ts:index --trace\
+bundle exec rake ts:start --trace\
++2200,,111111111STOP APACHE: sudo apachectl stop\
+\
+SIDEKIQ\
+	pkill -f sidekiq\
+	ps -ef | grep sidekiq | grep -v grep | awk '\{print $2\}' | xargs kill -9\
+	RAILS_ENV=production sidekiq\
+	RAILS_ENV=production sidekiq -d -L log/sidekiq.log\
+\
+psql --host db-vpm.cwd31nf4okxa.us-west-2.rds.amazonaws.com --port 5432 --username gerwin --dbname vpm_wo_production\
+ge3rwi!n\
+\
+SFTP user@ip #for transfer files\
+psql --host 127.0.0.1 --port 5433 --username postgres --dbname vpm_development > \
+test\
+psql --host 127.0.0.1 --port 5433 --username postgres --dbname vpm_development > production.sq\
+COPY (SELECT w.id,w.technician,p.id,p.name FROM work_orders w LEFT JOIN properties p ON w.property_id=p.id where w.id > 7465) TO '/tmp/technician_property_list_2.csv' WITH (FORMAT CSV);\
+\
+COPY (SELECT id,technician FROM work_orders WHERE id > 9000) TO '/tmp/workorder.csv' WITH (FORMAT CSV);\
+cd /tmp\
+sudo mv workorder.csv ~/Desktop\
+\
+RAILS_ENV=production rake maintenance:start reason="Regular Maintenance" allowed_ips="52.27.97.62"\
+RAILS_ENV=production rake maintenance:end\
+\
+ActiveRecord::Base.connection.tables\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE apt_common_areas 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE users 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE properties 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE gl_codes 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE user_properties 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE properties 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE work_requests 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE work_orders 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE technicians 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE work_order_technicians 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE apt_common_areas 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE property_technicians 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE authentications 
+\f1 RESTART IDENTITY
+\f0 ")\
+\
+ActiveRecord::Base.connection.drop_table("apt_common_areas")\
+ActiveRecord::Base.connection.drop_table("users
+\f1 "
+\f0 )\
+ActiveRecord::Base.connection.drop_table("properties")\
+ActiveRecord::Base.connection.drop_table("gl_codes")\
+ActiveRecord::Base.connection.drop_table("user_properties")\
+ActiveRecord::Base.connection.drop_table("properties")\
+ActiveRecord::Base.connection.drop_table("schema_migrations")\
+ActiveRecord::Base.connection.drop_table("technicians")\
+ActiveRecord::Base.connection.drop_table("work_order_technicians")\
+ActiveRecord::Base.connection.drop_table("property_technicians")\
+ActiveRecord::Base.connection.drop_table("authentications")\
+ActiveRecord::Base.connection.drop_table("work_orders")\
+ActiveRecord::Base.connection.drop_table("work_requests")\
+ActiveRecord::Base.connection.drop_table("rails_admin_histories")\
+ActiveRecord::Base.connection.drop_table("oauth_caches")\
+\
+ActiveRecord::Base.connection.tables\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE apt_common_areas 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE users 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE properties 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE gl_codes 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE user_properties 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE work_requests 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE work_orders 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE authentications 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE rails_admin_histories 
+\f1 RESTART IDENTITY
+\f0 ")\
+ActiveRecord::Base.connection.execute("TRUNCATE TABLE oauth_caches 
+\f1 RESTART IDENTITY
+\f0 ")\
+\
+User.where(role: 2).order(:id).each do |u|\
+puts u.id\
+u.password = 'Village#985'\
+u.save!\
+end\
+\
+\
+User.where(role: 1).order(:id).each do |u|\
+puts u.id\
+u.password = 'Village*Admin'\
+u.save!\
+end\
+\
+User.where(role: 2).order(:id).each do |u|\
+puts u.id\
+u.password = 'Village#985'\
+u.save!\
+end\
+\
+User.where(role: 3).order(:id).each do |u|\
+puts u.id\
+u.password = 'Village#985'\
+u.save!\
+end\
+\
+User.where(role: 4).order(:id).each do |u|\
+puts u.id\
+u.password = 'Vpm#site24'\
+u.save!\
+end\
+\
+Patient.where(patient_id: nil).each do |p|\
+p.patient_id =500\
+puts "-------------#\{p.id\}"\
+end\
+\
+/Library/PostgreSQL/9.3\
+/Library/PostgreSQL/9.3/data\
+u/p: postgress/test\
+port: 5433\
+\
+psql -U  postgres -p 5433 -h 127.0.0.1\
+---------------------------------------------------------------------------------------------------------------\
+\
+ALTER TABLE dynamic_column_data ADD CONSTRAINT fk_grade_id FOREIGN KEY (dynamic_cl_id) REFERENCES dynamic_columns(id)\
+\
+$sql = "insert into tbl_user (name, age, groupname)\
+			values (?, ?, ?)";\
+$this-> db-> query($sql,array('codeigniter, 35, 'Group 1'));\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf0 $sql = "SELECT * FROM some_table WHERE id = 
+\f2\i ?
+\f1\i0  AND status = 
+\f2\i ?
+\f1\i0  AND author = 
+\f2\i ?
+\f1\i0 "; \
+\
+$this->db->query($sql, array(3, 'live', 'Rick'));
+\f0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+==> make dist_libstemmer_c\
+==> tar xzf dist/libstemmer_c.tgz -C /private/tmp/sphinx20150825-10277-1efbpq2/sphinx-2.2.4-release\
+==> ./configure --prefix=/usr/local/Cellar/sphinx/2.2.4 --localstatedir=/usr/local/var --with-libstemmer --without-mysql --without-pgsql\
+==> make install\
+Caveats\
+\
+\
+\
+\
+production:\
+  adapter: postgresql\
+  database: rails\
+  pool: 5\
+  username: rails\
+  password: sfbXsKd0XL\
+\
+95X2.92 = 280\
+65X11.78=765\
+motr        = 1400\
+rent  =       24000\
+gas   =      700\
+\
+\
+\
+Message.where(:practice_id => nil).where.not(:patient_id => nil).each do |ms|\
+	practice_id = ms.patient.practice.id rescue nil\
+	ms.practice_id = practice_id\
+	ms.save!\
+	puts "update record>>>>>>>>> #\{ms.id\}"\
+end\
+}
